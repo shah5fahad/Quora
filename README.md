@@ -31,74 +31,75 @@ A full-featured Question & Answer platform inspired by **Quora**, built using **
 | HTML/CSS     | Bootstrap 5 |
 | JavaScript   | Vanilla JS |
 
----
+------
 
 ## 📁 Project Structure
-
-quora_project/ 
-├── Posts/ # App containing questions, answers 
-│ ├── models.py # Models: Question, Answer, Like 
-│ ├── views.py # CBVs: List, Detail, Create 
-│ ├── forms.py # Django forms for input 
-│ ├── urls.py # App URL patterns 
-│ ├── templates/ 
-│ ├── posts/ 
-│ ├── question_list.html 
-│ ├── question_detail.html 
-│ ├── question_form.html 
-├── users/ # User-related views and forms 
-│ ├── views.py # Login, Logout, Register (CBVs) 
-│ ├── forms.py # User signup form 
-│ ├── templates/ 
-│ ├── registration/ 
-│ ├── login.html 
-│ ├── logout.html 
-│ ├── register.html 
-├── templates/ 
-│ ├── base.html # Bootstrap layout 
-├── quora_project/ │ 
-├── settings.py # Installed apps and middleware 
-├── manage.py └── README.md
-
-
+````bash
+quora_project/
+├── Posts/                          # App containing questions, answers
+│   ├── models.py                   # Models: Question, Answer, Like
+│   ├── views.py                    # CBVs: List, Detail, Create
+│   ├── forms.py                    # Django forms for input
+│   ├── urls.py                     # App URL patterns
+│   ├── templates/
+│   │   └── question_list.html
+│   │   ├── question_detail.html
+│   │   └── question_form.html
+│
+├── users/                          # User-related views and forms
+│   ├── views.py                    # Login, Logout, Register (CBVs)
+│   ├── forms.py                    # User signup form
+│   ├── templates/
+│   │   └── login.html
+│   │   ├── logout.html
+│   │   └── register.html
+│
+├── templates/
+│   └── base.template                   # Bootstrap layout
+│
+├── Quora/
+│   └── settings.py                 # Installed apps and middleware
+│
+├── manage.py
+└── README.md
+````
 ---
 
 ## Setup Instructions
 
 1. **Clone the repository**
-
-```bash
+````bash
 git clone https://github.com/your-username/quora-clone.git
 cd quora-clone
-
+````
 2. **Create a virtual environment and activate it**
-
+````bash
 python3.12 -m venv venv
 source venv/bin/activate  # For Windows: venv\Scripts\activate
-
+````
 3. **Install dependencies**
-
+````bash
 pip install -r requirements.txt
-
+````
 4. **Apply migrations**
-
+````bash
 python manage.py makemigrations
 python manage.py migrate
-
+````
 5. **Create a superuser (for admin access)**
-
+````bash
 python manage.py createsuperuser
-
+````
 6. **Run the server**
-
+````bash
 python manage.py runserver
-
+````
 7. **Access the application**
-
+````bash
 Frontend: http://127.0.0.1:8000/
 
 Admin: http://127.0.0.1:8000/admin/
-
+````
 ## Forms Used
 
 QuestionForm — For submitting a question (title & description)
